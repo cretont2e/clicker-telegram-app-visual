@@ -176,7 +176,7 @@ export default function Loading({ setIsInitialized, setCurrentView }: LoadingPro
           </div>
         </div>
 
-        <h1 className="text-3xl font-bold mb-4">Loading SPACECRETON</h1>
+        <h1 className="text-3xl font-bold mb-4">Loading T2E CRETON</h1>
 
         <div className="flex items-center space-x-2">
           <IceCube className="w-8 h-8 animate-pulse" />

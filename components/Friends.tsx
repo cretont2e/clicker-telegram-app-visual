@@ -108,7 +108,7 @@ export default function Friends() {
       ? `https://t.me/${process.env.NEXT_PUBLIC_BOT_USERNAME}/${process.env.NEXT_PUBLIC_APP_URL_SHORT_NAME}?startapp=kentId${userTelegramId || ""}`
       : "https://t.me/clicker_game_news";
 
-    const shareText = `🎮 Join me in SPACECRETON: Tap, Earn, and Win! 🏆\n🚀 Let's play and earn together!`;
+    const shareText = `🎮 Join me in CRETON: Tap, Earn, and Win! 🏆\n🚀 Let's play and earn together!`;
 
     try {
       triggerHapticFeedback(window);

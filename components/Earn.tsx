@@ -123,7 +123,7 @@ export default function Earn() {
                 <div className="flex justify-center mb-4">
                   <IceCube className="w-24 h-24 mx-auto" />
                 </div>
-                <h1 className="text-2xl text-center mb-4">Earn More Runa</h1>
+                <h1 className="text-2xl text-center mb-4">Earn More CRETON</h1>
 
                 {isLoading ? (
                   <TaskSkeleton />

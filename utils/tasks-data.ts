@@ -78,7 +78,7 @@ export const earnData = [
           callToAction: "Follow on X",
           type: "VISIT",
           taskData: {
-            link: "https://x.com/spaceminebattle"
+            link: "https://x.com/Creton_Game"
           },
           isActive: true  
         },

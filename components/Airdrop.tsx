@@ -221,7 +221,7 @@ export default function Airdrop() {
                         <div className="px-4 pt-1 pb-24">
                             <div className="relative mt-4">
                                 <div className="flex justify-center mb-4">
-                                    <Image src={iceToken} alt="Runa Token" width={96} height={96} className="rounded-lg mr-2" />
+                                    <Image src={iceToken} alt="CRETON Token" width={96} height={96} className="rounded-lg mr-2" />
                                 </div>
                                 <h1 className="text-2xl text-center mb-4">Airdrop Tasks</h1>
                                 <p className="text-gray-300 text-center mb-4 font-normal">There is a list of challenges below. Complete them to qualify for the Airdrop.</p>
