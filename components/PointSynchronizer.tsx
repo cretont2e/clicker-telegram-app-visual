@@ -60,10 +60,11 @@ export function PointSynchronizer() {
                 }),
             });
 
+            /*
             if (!response.ok) {
                 const errorData = await response.json();
                 throw new Error(`Failed to sync with server: ${errorData.error || response.statusText}`);
-            }
+            } */
 
             const data = await response.json();
             console.log("Data from server: ", data);
