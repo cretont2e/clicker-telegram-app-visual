@@ -8,6 +8,7 @@ const ALLOWED_IPS = [
   '127.0.0.1',     // IPv4 localhost
   '::1',           // IPv6 localhost
   '121.160.74.110'   // 실제 외부 고정 IP 예시
+  ,'59.6.190.163'
 ];
 
 function getClientIp(req: NextRequest): string | null {
