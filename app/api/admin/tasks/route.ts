@@ -7,8 +7,10 @@ import prisma from '@/utils/prisma';
 const ALLOWED_IPS = [
   '127.0.0.1',     // IPv4 localhost
   '::1',           // IPv6 localhost
-  '121.160.74.110'   // 실제 외부 고정 IP 예시
-  ,'59.6.190.163'
+  '128.134.199.105', // 이엔씨5차 사무실
+  '121.166.200.172',  //송교수님 댁
+  '175.123.204.160',  //리암 집 
+  '221.168.213.72' //이영환
 ];
 
 function getClientIp(req: NextRequest): string | null {
