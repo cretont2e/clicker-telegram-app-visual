@@ -23,6 +23,17 @@ interface CheckTelegramTaskRequestBody {
 }
 
 export async function POST(req: Request) {
+    // Development bypass - return mock success response
+    if (process.env.NEXT_PUBLIC_BYPASS_TELEGRAM_AUTH === 'true') {
+        console.log("DEVELOPMENT BYPASS - Returning mock telegram task check success");
+        
+        return NextResponse.json({
+            success: true,
+            isCompleted: true,
+            message: "Task completed successfully! You've earned 5,000 CRETON points."
+        });
+    }
+
     const botToken = process.env.BOT_TOKEN;
 
     if (!botToken) {

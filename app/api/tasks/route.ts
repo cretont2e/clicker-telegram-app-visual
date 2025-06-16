@@ -25,6 +25,66 @@ export async function GET(req: Request) {
     return NextResponse.json({ error: 'Invalid request' }, { status: 400 });
   }
 
+  // Development bypass - return mock task data
+  if (process.env.NEXT_PUBLIC_BYPASS_TELEGRAM_AUTH === 'true') {
+    console.log("DEVELOPMENT BYPASS - Returning mock task data");
+    
+    const mockTasks = [
+      {
+        id: "1",
+        title: "Join our Telegram Channel",
+        description: "Subscribe to our official Telegram channel",
+        points: 5000,
+        image: "telegram",
+        category: "telegram",
+        isActive: true,
+        type: "TELEGRAM",
+        callToAction: "Subscribe",
+        taskData: {
+          link: "https://t.me/clicker_game_news"
+        },
+        taskStartTimestamp: null,
+        isCompleted: false
+      },
+      {
+        id: "2", 
+        title: "Follow us on X",
+        description: "Follow our X account for updates",
+        points: 2500,
+        image: "x",
+        category: "social",
+        isActive: true,
+        type: "VISIT",
+        callToAction: "Follow",
+        taskData: {
+          link: "https://x.com/example"
+        },
+        taskStartTimestamp: null,
+        isCompleted: false
+      },
+      {
+        id: "3",
+        title: "Visit our Website", 
+        description: "Check out our official website",
+        points: 1000,
+        image: "website",
+        category: "visit",
+        isActive: true,
+        type: "VISIT",
+        callToAction: "Visit",
+        taskData: {
+          link: "https://nikandr.com"
+        },
+        taskStartTimestamp: null,
+        isCompleted: false
+      }
+    ];
+
+    return NextResponse.json({
+      tasks: mockTasks,
+    });
+  }
+
   const { validatedData, user } = validateTelegramWebAppData(telegramInitData);
 
   if (!validatedData) {

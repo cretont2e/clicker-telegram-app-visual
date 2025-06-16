@@ -37,6 +37,26 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: 'Invalid request' }, { status: 400 });
   }
 
+  // Development bypass - return mock user data
+  if (process.env.NEXT_PUBLIC_BYPASS_TELEGRAM_AUTH === 'true') {
+    console.log("DEVELOPMENT BYPASS - Returning mock user data");
+    
+    const mockUserData = {
+      points: 3942744,
+      pointsBalance: 3942744,
+      multitapLevelIndex: 0,
+      energy: 6500,
+      energyLimitLevelIndex: 0,
+      mineLevelIndex: 7,
+      energyRefillsLeft: 6,
+      lastPointsUpdateTimestamp: Date.now(),
+      lastEnergyRefillsTimestamp: Date.now(),
+      tonWalletAddress: null,
+    };
+
+    return NextResponse.json(mockUserData, { status: 200 });
+  }
+
   const { validatedData, user: telegramUser } = validateTelegramWebAppData(telegramInitData);
 
   console.log("Validated data", validatedData);
