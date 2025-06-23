@@ -18,7 +18,7 @@ import { StaticImageData } from "next/image";
 
 export const ALLOW_ALL_DEVICES = true;
 
-export const WALLET_MANIFEST_URL = "https://violet-traditional-rabbit-103.mypinata.cloud/ipfs/QmcFgnfXoiNtp8dvy25xA9hMEjz5AzugTuPQNTHQMTw9Tf";
+export const WALLET_MANIFEST_URL = "/tonconnect-manifest.json";
 
 export interface LevelData {
   name: string;

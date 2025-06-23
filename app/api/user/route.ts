@@ -42,12 +42,12 @@ export async function POST(req: Request) {
     console.log("DEVELOPMENT BYPASS - Returning mock user data");
     
     const mockUserData = {
-      points: 3942744,
-      pointsBalance: 3942744,
-      multitapLevelIndex: 0,
-      energy: 6500,
-      energyLimitLevelIndex: 0,
-      mineLevelIndex: 7,
+      points: 10000000,        // Level 7 (Craftsman) - 10M points
+      pointsBalance: 10000000, // Synchronized with points (testing the fix)
+      multitapLevelIndex: 5,   // Decent multitap level for testing
+      energy: 7000,            // Full energy for testing
+      energyLimitLevelIndex: 13, // Energy capacity of 7000 (500 * 14 levels)
+      mineLevelIndex: 10,      // Good mine level for testing
       energyRefillsLeft: 6,
       lastPointsUpdateTimestamp: Date.now(),
       lastEnergyRefillsTimestamp: Date.now(),

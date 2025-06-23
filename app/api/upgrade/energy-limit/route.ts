@@ -92,7 +92,7 @@ export async function POST(req: Request) {
                         lastPointsUpdateTimestamp: dbUser.lastPointsUpdateTimestamp, // Optimistic lock
                     },
                     data: {
-                        points: { increment: minedPoints },
+                        points: { increment: minedPoints - upgradeCost }, 
                         pointsBalance: updatedPointsBalance - upgradeCost,
                         energyLimitLevelIndex: newEnergyLimitLevelIndex,
                         lastPointsUpdateTimestamp: new Date(currentTime),
